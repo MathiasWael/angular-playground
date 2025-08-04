@@ -1,0 +1,12 @@
+@use "tailwindcss";
+
+:root {
+  --color-primary: #283879;
+  --color-secondary: #283879;
+  --color-background: #283879;
+}
+
+body {
+    background-color: var(--color-background);
+    color: white
+}

@@ -1,0 +1,10 @@
+<div>
+  <div class="flex justify-center text-4xl font-bold my-8">
+    <h1>{{ title() }}</h1>
+  </div>
+  <div class="flex flex-row gap-8 items-center justify-center router-bar">
+    <a routerLink="/" class="px-4 py-2 text-center font-bold">Home</a>
+    <a routerLink="/test" class="px-4 py-2 text-center font-bold">Test</a>
+  </div>
+  <router-outlet></router-outlet>
+</div>
