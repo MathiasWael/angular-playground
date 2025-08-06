@@ -1,0 +1,41 @@
+<p>components works!</p>
+<app-child-component
+    [value]="11"
+    [valueWithTransform]="10"
+    somethingElse="falsey"
+    booleanTransform="false"
+    numberTransform="05"
+    [(valueWithModel)]="inputForModel"
+    [valueWithModel]="inputForModelWithoutBinding"
+    [(valueWithModelForSignal)]="inputSignalForModel"
+    (valueWithModelChange)="modelChanged()"
+    (valueChangedOutput)="valueChangedTriggered($event)"
+  >
+  <div ngProjectAs="card-title">
+    <p>Content projected into child component</p>
+  </div>
+    
+</app-child-component>
+<p>Input Signal For Model: {{ inputSignalForModel() }}</p>
+<p>Input For Model: {{ inputForModel }}</p>
+<p>Input For Model Without Binding: {{ inputForModelWithoutBinding }}</p>
+
+<p class="text-4xl font-bold">PROJECTOR 1</p>
+<app-projecter-component #first>
+  <app-child-component />
+</app-projecter-component>
+
+<p class="text-4xl font-bold">PROJECTOR 2</p>
+<app-projecter-component #second>
+  <app-child-component />
+</app-projecter-component>
+
+<p>ngComponentOutlet</p>
+<ng-container *ngComponentOutlet="getBioComponent(true)"></ng-container>
+
+
+<p>ViewContainerRef</p>
+<button (click)="loadContent()">Load content</button>
+
+<p>Lazy loading with ngComponentOutlet</p>
+<ng-container *ngComponentOutlet="lazyComponent"></ng-container>

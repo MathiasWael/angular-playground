@@ -1,0 +1,7 @@
+<p>templates works!</p>
+<div [class.red-border]="hasRedBorder">sometimes has a red border</div>
+<button (click)="hasRedBorder = !hasRedBorder">Toggle Red Border</button>
+<p>keyup.enter:</p>
+<input type="text" class="bg-gray-400" (keyup.enter)="keyupEnter($event)" />
+<p>keyup.shift.enter:</p>
+<input type="text" class="bg-gray-400" (keyup.shift.enter)="keyupShiftEnter($event)" />

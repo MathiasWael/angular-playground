@@ -1,0 +1,31 @@
+<div>
+    <p>Name: {{ name }}</p>
+    <p>Signal Name: {{ signalName() }}</p>
+    <p>Name (Computed): {{ computedName() }}</p>
+    <p>Signal Name (Computed): {{ computedSignalName() }}</p>
+
+    <button (click)="changeNames()">Change Names</button>
+</div>
+<br>
+<div>
+    <p>showTrialDuration: {{ showTrialDuration() }}</p>
+    <p>showTrialDuration2: {{ showTrialDuration2 }}</p>
+
+    <button (click)="activateTrial()">Activate Trial</button>
+</div>
+<br>
+<div>
+    <p>Signal Without Equal: {{ computedSignalWithoutEqual().value }}</p>
+    <p>Signal With Equal: {{ computedSignalWithEqual().value }}</p>
+
+    <button (click)="changeEqualSignals()">Change Equal Signals</button>
+    <button (click)="sameEqualSignals()">Same Equal Signals</button>
+</div>
+<br>
+<div>
+    <p>Tracked Counter: {{ trackedCounter() }}</p>
+    <p>Not Tracked Counter: {{ notTrackedCounter() }}</p>
+
+    <button (click)="incrementTrackedCounter()">Increment Tracked Counter</button>
+    <button (click)="incrementNotTrackedCounter()">Increment Not Tracked Counter</button>
+</div>

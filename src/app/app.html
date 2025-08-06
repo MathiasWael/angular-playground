@@ -4,7 +4,12 @@
   </div>
   <div class="flex flex-row gap-8 items-center justify-center router-bar">
     <a routerLink="/" class="px-4 py-2 text-center font-bold">Home</a>
-    <a routerLink="/test" class="px-4 py-2 text-center font-bold">Test</a>
+    <a routerLink="/signals" class="px-4 py-2 text-center font-bold">Signals</a>
+    <a routerLink="/components" class="px-4 py-2 text-center font-bold">Components</a>
+    <a routerLink="/templates" class="px-4 py-2 text-center font-bold">Templates</a>
+    <a routerLink="/directives" class="px-4 py-2 text-center font-bold">Directives</a>
+    <a routerLink="/forms" class="px-4 py-2 text-center font-bold">Forms</a>
+    <a [routerLink]="['/routing', 1]" class="px-4 py-2 text-center font-bold">Routing</a>
   </div>
   <router-outlet></router-outlet>
 </div>

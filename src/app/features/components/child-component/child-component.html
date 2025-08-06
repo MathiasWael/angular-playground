@@ -1,0 +1,8 @@
+<p>childcomponent works!</p>
+<p>Value: {{ value() }}</p>
+<p>Value with Transform: {{ valueWithTransform() }}</p>
+<p>Boolean Transform: {{ booleanTransform() }}</p>
+<p>Number Transform: {{ numberTransform() }}</p>
+<button (click)="incrementModelValues()">Increment Model Values</button>
+<ng-content select="card-title">Fallback for card-title</ng-content>
+<ng-content select="card-content">Fallback for card-content</ng-content>

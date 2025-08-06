@@ -1,0 +1,7 @@
+<p>directives works!</p>
+<p [ngStyle]="currentStyles()">Current Styles</p>
+<p [ngClass]="currentClasses()">Current Classes</p>
+<p appHighlight>Highlighted with attribute directive</p>
+<p appHighlight [highlightClass]="highlightClass">Highlighted with attribute directive, using input</p>
+<p>Use ngNonBindable to stop evaluation: {{ 1 + 1 }}</p>
+<p ngNonBindable>This should not evaluate: {{ 1 + 1 }}</p>

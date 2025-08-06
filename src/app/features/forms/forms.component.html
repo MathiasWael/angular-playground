@@ -1,0 +1,14 @@
+<p>forms.component works!</p>
+
+<p class="text-4xl font-bold">template-driven form</p>
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <label for="firstName">First name:</label>
+  <input type="text" id="firstName" name="firstName" [(ngModel)]="model.firstName" required />
+  <label for="lastName">Last name:</label>
+  <input type="text" id="lastName" name="lastName" [(ngModel)]="model.lastName" required />
+  <button type="submit" [disabled]="!form.valid">Submit</button>
+</form>
+
+<p class="text-4xl font-bold">template reference</p>
+<app-reference #ref></app-reference>
+<p>Value from reference component: {{ ref.value }}</p>
